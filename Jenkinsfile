@@ -8,7 +8,8 @@ node {
 
     def HUB_ORG=env.HUB_ORG_DH
     def SFDC_HOST = env.SFDC_HOST_DH
-    def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
+   // def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
+    def JWT_KEY_CRED_ID = "6cb53a9c-e9c0-43dd-9021-ce9a6ec12194"
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 
     println 'KEY IS' 
@@ -16,8 +17,9 @@ node {
     println HUB_ORG
     println SFDC_HOST
     println CONNECTED_APP_CONSUMER_KEY
-    def toolbelt = tool 'toolbelt'
-
+   // def toolbelt = tool 'toolbelt'
+   def toolbelt = "C:\\Program Files\\Salesforce CLI\\bin\\sfdx"
+	
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command
         checkout scm
